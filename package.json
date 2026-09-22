@@ -1,0 +1,92 @@
+{
+  "name": "flow-visualizer",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Markdown-driven functionality and workflow explorer: parser, deterministic 3D layout, and a 2D/3D viewer.",
+  "scripts": {
+    "dev": "vite",
+    "dev:tunnel": "vite --mode tunnel",
+    "build": "npm run build:node && npm run build:web",
+    "preview": "vite preview",
+    "share": "npm run parse && npm run build && vite preview --port 4173",
+    "parse": "tsx src/parser/build.ts",
+    "parse:file": "tsx src/parser/cli.ts",
+    "scan": "tsx src/scanner/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "build:node": "tsc -p tsconfig.build.json",
+    "build:web": "vite build",
+    "cli": "node dist/node/cli/index.js",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@dagrejs/dagre": "^3.1.1",
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "three": "^0.185.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@types/three": "^0.185.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^8.2.2",
+    "vitest": "^2.1.8"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "architecture",
+    "documentation",
+    "markdown",
+    "visualization",
+    "graph",
+    "workflow",
+    "diagram"
+  ],
+  "bin": {
+    "flow-visualizer": "dist/node/cli/index.js"
+  },
+  "main": "dist/node/parser/index.js",
+  "types": "dist/node/parser/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/node/parser/index.d.ts",
+      "import": "./dist/node/parser/index.js"
+    },
+    "./schema": {
+      "types": "./dist/node/schema/graph.d.ts",
+      "import": "./dist/node/schema/graph.js"
+    },
+    "./layout": {
+      "types": "./dist/node/layout/index.d.ts",
+      "import": "./dist/node/layout/index.js"
+    },
+    "./scanner": {
+      "types": "./dist/node/scanner/runScan.d.ts",
+      "import": "./dist/node/scanner/runScan.js"
+    },
+    "./vite": {
+      "types": "./dist/node/server/documentsApi.d.ts",
+      "import": "./dist/node/server/documentsApi.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "docs/CONVENTION.md",
+    "docs/AUTHORING-PROMPT.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "private": true
+}
