@@ -1,0 +1,1974 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "title": "Navigate — Authentication",
+    "scope": "feature",
+    "source": "docs/apps/navigate-auth.md",
+    "extra": {
+      "Repo": "c:\\Onee drive data\\navigate",
+      "Stack": "Express + Sequelize, React + Vite (TypeScript)"
+    }
+  },
+  "nodes": [
+    {
+      "id": "visitor",
+      "kind": "actor",
+      "layer": "actor",
+      "name": "Visitor",
+      "description": "Someone who is not signed in yet.",
+      "module": "Access",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "sign-in",
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 13
+      },
+      "parentId": "module/access"
+    },
+    {
+      "id": "user",
+      "kind": "actor",
+      "layer": "actor",
+      "name": "Signed-in user",
+      "module": "Access",
+      "roles": [
+        "super-admin",
+        "company-admin",
+        "end-user"
+      ],
+      "meta": {},
+      "workflows": [
+        "sign-in"
+      ],
+      "rolesReached": [
+        "User"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 18
+      },
+      "parentId": "module/access"
+    },
+    {
+      "id": "login-page",
+      "kind": "ui",
+      "layer": "interface",
+      "name": "Login screen",
+      "description": "Drives sign-in, the OTP request, code entry and the new password. It is the only page that imports authService.",
+      "module": "Sign-in client",
+      "roles": [],
+      "meta": {
+        "Source": "front-navigate/src/pages/Auth/Login.tsx"
+      },
+      "workflows": [
+        "sign-in",
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 25
+      },
+      "parentId": "module/sign-in-client"
+    },
+    {
+      "id": "auth-service",
+      "kind": "function",
+      "layer": "logic",
+      "name": "authService",
+      "module": "Sign-in client",
+      "roles": [],
+      "meta": {
+        "Source": "front-navigate/src/services/authService.ts",
+        "Exports": "login, sendOtp, verifyOtp, updatePassword"
+      },
+      "workflows": [
+        "sign-in",
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 32
+      },
+      "parentId": "module/sign-in-client"
+    },
+    {
+      "id": "axios-instance",
+      "kind": "function",
+      "layer": "logic",
+      "name": "axiosInstance",
+      "module": "Sign-in client",
+      "roles": [],
+      "meta": {
+        "Source": "front-navigate/src/utils/axiosInstance.ts",
+        "Attaches": "auth_token cookie on outgoing requests"
+      },
+      "workflows": [
+        "sign-in"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 38
+      },
+      "parentId": "module/sign-in-client"
+    },
+    {
+      "id": "auth-cookie",
+      "kind": "state",
+      "layer": "data",
+      "name": "auth_token cookie",
+      "module": "Sign-in client",
+      "roles": [],
+      "meta": {
+        "Lifetime": "7 days",
+        "Carries": "email, userId, role, rank, companyId, companyStatus"
+      },
+      "workflows": [
+        "sign-in"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 44
+      },
+      "parentId": "module/sign-in-client"
+    },
+    {
+      "id": "navigate-by-role",
+      "kind": "decision",
+      "layer": "logic",
+      "name": "Where does this role land?",
+      "description": "Sends super-admin to company management, company-admin to the admin dashboard, and end-user to the dashboard or to the privacy policy on a first login.",
+      "module": "Sign-in client",
+      "roles": [],
+      "meta": {
+        "Source": "front-navigate/src/pages/Auth/Login.tsx:163"
+      },
+      "workflows": [
+        "sign-in"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 50
+      },
+      "parentId": "module/sign-in-client"
+    },
+    {
+      "id": "post-login",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /auth/login",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/auth/login",
+        "Source": "back-navigate/routes/auth.routes.js:5"
+      },
+      "workflows": [
+        "sign-in"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 59
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "post-send-otp",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /auth/send-otp",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/auth/send-otp",
+        "Source": "back-navigate/routes/auth.routes.js:6"
+      },
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 66
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "post-verify-otp",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /auth/verify-otp",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/auth/verify-otp",
+        "Source": "back-navigate/routes/auth.routes.js:7"
+      },
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 73
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "post-update-password",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /auth/update-password",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/auth/update-password",
+        "Source": "back-navigate/routes/auth.routes.js:8"
+      },
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 80
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "auth-controller",
+      "kind": "controller",
+      "layer": "logic",
+      "name": "auth.controller",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Source": "back-navigate/controllers/auth.controller.js"
+      },
+      "workflows": [
+        "sign-in",
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 87
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "verify-credentials",
+      "kind": "decision",
+      "layer": "logic",
+      "name": "Do the credentials match?",
+      "description": "Compares the submitted password against the stored bcrypt hash.",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Source": "back-navigate/controllers/auth.controller.js:118"
+      },
+      "workflows": [
+        "sign-in"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 92
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "issue-jwt",
+      "kind": "function",
+      "layer": "logic",
+      "name": "jwt.sign",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Source": "back-navigate/controllers/auth.controller.js:126",
+        "Expiry": "7d"
+      },
+      "workflows": [
+        "sign-in"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 98
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "check-company-status",
+      "kind": "decision",
+      "layer": "logic",
+      "name": "Is the company still enabled?",
+      "description": "Read on the client from the decoded token, not enforced by the login response itself.",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Source": "front-navigate/src/pages/Auth/Login.tsx:128"
+      },
+      "workflows": [
+        "sign-in"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 104
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "generate-otp",
+      "kind": "function",
+      "layer": "logic",
+      "name": "generateOTP",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Source": "back-navigate/controllers/auth.controller.js:164",
+        "Shape": "four digits, valid for five minutes"
+      },
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 110
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "otp-store",
+      "kind": "store",
+      "layer": "data",
+      "name": "otpStore",
+      "description": "A plain object held in the Node process, not a database or a cache.",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Source": "back-navigate/controllers/auth.controller.js:19"
+      },
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 116
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "verify-otp-check",
+      "kind": "decision",
+      "layer": "logic",
+      "name": "Is the code valid?",
+      "description": "Checks the code exists, has not expired, and matches. Deletes it on success.",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Source": "back-navigate/controllers/auth.controller.js:205"
+      },
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 122
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "check-new-password",
+      "kind": "decision",
+      "layer": "logic",
+      "name": "Is the new password different?",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Source": "back-navigate/controllers/auth.controller.js:264"
+      },
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 128
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "hash-password",
+      "kind": "function",
+      "layer": "logic",
+      "name": "bcrypt.hash",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {
+        "Source": "back-navigate/controllers/auth.controller.js:276",
+        "Rounds": "10"
+      },
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 133
+      },
+      "parentId": "module/auth-api"
+    },
+    {
+      "id": "user-table",
+      "kind": "entity",
+      "layer": "data",
+      "name": "users",
+      "module": "Data",
+      "roles": [],
+      "meta": {
+        "Model": "back-navigate/models/user.model.js",
+        "Columns": "email, password, role, rank, companyId, imagePath"
+      },
+      "workflows": [
+        "sign-in",
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 141
+      },
+      "parentId": "module/data"
+    },
+    {
+      "id": "company-table",
+      "kind": "entity",
+      "layer": "data",
+      "name": "companies",
+      "description": "Read during login for isStatus, which becomes companyStatus in the token.",
+      "module": "Data",
+      "roles": [],
+      "meta": {
+        "Model": "back-navigate/models/company.model.js"
+      },
+      "workflows": [
+        "sign-in"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 147
+      },
+      "parentId": "module/data"
+    },
+    {
+      "id": "email-transport",
+      "kind": "function",
+      "layer": "logic",
+      "name": "sendEmail",
+      "module": "Email",
+      "roles": [],
+      "meta": {
+        "Source": "back-navigate/controllers/auth.controller.js:38",
+        "Transport": "nodemailer",
+        "Template": "email-templates/otp-template.html"
+      },
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 155
+      },
+      "parentId": "module/email"
+    },
+    {
+      "id": "smtp-provider",
+      "kind": "external",
+      "layer": "external",
+      "name": "SMTP provider",
+      "module": "Email",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 162
+      },
+      "parentId": "module/email"
+    },
+    {
+      "id": "module/access",
+      "kind": "module",
+      "layer": "actor",
+      "name": "Access",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "sign-in",
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor",
+        "User"
+      ],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 11
+      }
+    },
+    {
+      "id": "module/sign-in-client",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Sign-in client",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "sign-in",
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 23
+      }
+    },
+    {
+      "id": "module/auth-api",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Auth API",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "sign-in",
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 57
+      }
+    },
+    {
+      "id": "module/data",
+      "kind": "module",
+      "layer": "data",
+      "name": "Data",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "sign-in",
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 139
+      }
+    },
+    {
+      "id": "module/email",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Email",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [
+        "Visitor"
+      ],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 153
+      }
+    },
+    {
+      "id": "error/no-account-with-that-email-or-the-password-does-",
+      "kind": "error",
+      "layer": "logic",
+      "name": "no account with that email, or the password does not match, both answered as \"Invalid credentials!\"",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "sign-in"
+      ],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 188
+      }
+    },
+    {
+      "id": "account-disabled",
+      "kind": "error",
+      "layer": "logic",
+      "name": "the company is switched off, so the client immediately logs back out",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "sign-in"
+      ],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 189
+      }
+    },
+    {
+      "id": "error/any-unexpected-failure-is-answered-as-login-unsu",
+      "kind": "error",
+      "layer": "logic",
+      "name": "any unexpected failure is answered as \"Login Unsuccessful\"",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "sign-in"
+      ],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 190
+      }
+    },
+    {
+      "id": "user-not-found",
+      "kind": "error",
+      "layer": "data",
+      "name": "no account with that email, answered 404",
+      "module": "Data",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 218
+      }
+    },
+    {
+      "id": "error/the-code-is-wrong-has-expired-or-was-already-use",
+      "kind": "error",
+      "layer": "logic",
+      "name": "the code is wrong, has expired, or was already used",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 219
+      }
+    },
+    {
+      "id": "error/the-new-password-is-the-same-as-the-current-one",
+      "kind": "error",
+      "layer": "logic",
+      "name": "the new password is the same as the current one",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 220
+      }
+    },
+    {
+      "id": "otp-lost-on-restart",
+      "kind": "error",
+      "layer": "data",
+      "name": "pending codes live only in the process, so a backend restart invalidates every one of them",
+      "module": "Auth API",
+      "roles": [],
+      "meta": {},
+      "workflows": [
+        "reset-password"
+      ],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 221
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "module/access->visitor:contains",
+      "from": "module/access",
+      "to": "visitor",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 13
+      }
+    },
+    {
+      "id": "module/access->user:contains",
+      "from": "module/access",
+      "to": "user",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 18
+      }
+    },
+    {
+      "id": "module/sign-in-client->login-page:contains",
+      "from": "module/sign-in-client",
+      "to": "login-page",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 25
+      }
+    },
+    {
+      "id": "module/sign-in-client->auth-service:contains",
+      "from": "module/sign-in-client",
+      "to": "auth-service",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 32
+      }
+    },
+    {
+      "id": "module/sign-in-client->axios-instance:contains",
+      "from": "module/sign-in-client",
+      "to": "axios-instance",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 38
+      }
+    },
+    {
+      "id": "module/sign-in-client->auth-cookie:contains",
+      "from": "module/sign-in-client",
+      "to": "auth-cookie",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 44
+      }
+    },
+    {
+      "id": "module/sign-in-client->navigate-by-role:contains",
+      "from": "module/sign-in-client",
+      "to": "navigate-by-role",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 50
+      }
+    },
+    {
+      "id": "module/auth-api->post-login:contains",
+      "from": "module/auth-api",
+      "to": "post-login",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 59
+      }
+    },
+    {
+      "id": "module/auth-api->post-send-otp:contains",
+      "from": "module/auth-api",
+      "to": "post-send-otp",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 66
+      }
+    },
+    {
+      "id": "module/auth-api->post-verify-otp:contains",
+      "from": "module/auth-api",
+      "to": "post-verify-otp",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 73
+      }
+    },
+    {
+      "id": "module/auth-api->post-update-password:contains",
+      "from": "module/auth-api",
+      "to": "post-update-password",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 80
+      }
+    },
+    {
+      "id": "module/auth-api->auth-controller:contains",
+      "from": "module/auth-api",
+      "to": "auth-controller",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 87
+      }
+    },
+    {
+      "id": "module/auth-api->verify-credentials:contains",
+      "from": "module/auth-api",
+      "to": "verify-credentials",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 92
+      }
+    },
+    {
+      "id": "module/auth-api->issue-jwt:contains",
+      "from": "module/auth-api",
+      "to": "issue-jwt",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 98
+      }
+    },
+    {
+      "id": "module/auth-api->check-company-status:contains",
+      "from": "module/auth-api",
+      "to": "check-company-status",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 104
+      }
+    },
+    {
+      "id": "module/auth-api->generate-otp:contains",
+      "from": "module/auth-api",
+      "to": "generate-otp",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 110
+      }
+    },
+    {
+      "id": "module/auth-api->otp-store:contains",
+      "from": "module/auth-api",
+      "to": "otp-store",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 116
+      }
+    },
+    {
+      "id": "module/auth-api->verify-otp-check:contains",
+      "from": "module/auth-api",
+      "to": "verify-otp-check",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 122
+      }
+    },
+    {
+      "id": "module/auth-api->check-new-password:contains",
+      "from": "module/auth-api",
+      "to": "check-new-password",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 128
+      }
+    },
+    {
+      "id": "module/auth-api->hash-password:contains",
+      "from": "module/auth-api",
+      "to": "hash-password",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 133
+      }
+    },
+    {
+      "id": "module/data->user-table:contains",
+      "from": "module/data",
+      "to": "user-table",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 141
+      }
+    },
+    {
+      "id": "module/data->company-table:contains",
+      "from": "module/data",
+      "to": "company-table",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 147
+      }
+    },
+    {
+      "id": "module/email->email-transport:contains",
+      "from": "module/email",
+      "to": "email-transport",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 155
+      }
+    },
+    {
+      "id": "module/email->smtp-provider:contains",
+      "from": "module/email",
+      "to": "smtp-provider",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 162
+      }
+    },
+    {
+      "id": "wf/sign-in/1",
+      "from": "visitor",
+      "to": "login-page",
+      "kind": "renders",
+      "workflowId": "sign-in",
+      "order": 1,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 173
+      }
+    },
+    {
+      "id": "wf/sign-in/2",
+      "from": "login-page",
+      "to": "auth-service",
+      "kind": "calls",
+      "workflowId": "sign-in",
+      "order": 2,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 174
+      }
+    },
+    {
+      "id": "wf/sign-in/3",
+      "from": "auth-service",
+      "to": "axios-instance",
+      "kind": "calls",
+      "workflowId": "sign-in",
+      "order": 3,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 175
+      }
+    },
+    {
+      "id": "wf/sign-in/4",
+      "from": "axios-instance",
+      "to": "post-login",
+      "kind": "calls",
+      "workflowId": "sign-in",
+      "order": 4,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 176
+      }
+    },
+    {
+      "id": "wf/sign-in/5",
+      "from": "post-login",
+      "to": "auth-controller",
+      "kind": "calls",
+      "workflowId": "sign-in",
+      "order": 5,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 177
+      }
+    },
+    {
+      "id": "wf/sign-in/6",
+      "from": "auth-controller",
+      "to": "user-table",
+      "kind": "reads",
+      "workflowId": "sign-in",
+      "order": 6,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 178
+      }
+    },
+    {
+      "id": "wf/sign-in/7",
+      "from": "user-table",
+      "to": "company-table",
+      "kind": "reads",
+      "workflowId": "sign-in",
+      "order": 7,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 179
+      }
+    },
+    {
+      "id": "wf/sign-in/8",
+      "from": "company-table",
+      "to": "verify-credentials",
+      "kind": "next",
+      "workflowId": "sign-in",
+      "order": 8,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 180
+      }
+    },
+    {
+      "id": "wf/sign-in/9",
+      "from": "verify-credentials",
+      "to": "issue-jwt",
+      "kind": "calls",
+      "workflowId": "sign-in",
+      "order": 9,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 181
+      }
+    },
+    {
+      "id": "wf/sign-in/10",
+      "from": "issue-jwt",
+      "to": "auth-cookie",
+      "kind": "writes",
+      "workflowId": "sign-in",
+      "order": 10,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 182
+      }
+    },
+    {
+      "id": "wf/sign-in/11",
+      "from": "auth-cookie",
+      "to": "check-company-status",
+      "kind": "next",
+      "workflowId": "sign-in",
+      "order": 11,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 183
+      }
+    },
+    {
+      "id": "wf/sign-in/12",
+      "from": "check-company-status",
+      "to": "navigate-by-role",
+      "kind": "next",
+      "workflowId": "sign-in",
+      "order": 12,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 184
+      }
+    },
+    {
+      "id": "wf/sign-in/13",
+      "from": "navigate-by-role",
+      "to": "user",
+      "kind": "next",
+      "workflowId": "sign-in",
+      "order": 13,
+      "role": "User",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 185
+      }
+    },
+    {
+      "id": "wf/sign-in/error/1",
+      "from": "verify-credentials",
+      "to": "error/no-account-with-that-email-or-the-password-does-",
+      "kind": "error",
+      "label": "no account with that email, or the password does not match, both answered as \"Invalid credentials!\"",
+      "workflowId": "sign-in",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 188
+      }
+    },
+    {
+      "id": "wf/sign-in/error/2",
+      "from": "check-company-status",
+      "to": "account-disabled",
+      "kind": "error",
+      "label": "the company is switched off, so the client immediately logs back out",
+      "workflowId": "sign-in",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 189
+      }
+    },
+    {
+      "id": "wf/sign-in/error/3",
+      "from": "auth-controller",
+      "to": "error/any-unexpected-failure-is-answered-as-login-unsu",
+      "kind": "error",
+      "label": "any unexpected failure is answered as \"Login Unsuccessful\"",
+      "workflowId": "sign-in",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 190
+      }
+    },
+    {
+      "id": "wf/reset-password/1",
+      "from": "visitor",
+      "to": "login-page",
+      "kind": "renders",
+      "workflowId": "reset-password",
+      "order": 1,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 199
+      }
+    },
+    {
+      "id": "wf/reset-password/2",
+      "from": "login-page",
+      "to": "auth-service",
+      "kind": "calls",
+      "workflowId": "reset-password",
+      "order": 2,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 200
+      }
+    },
+    {
+      "id": "wf/reset-password/3",
+      "from": "auth-service",
+      "to": "post-send-otp",
+      "kind": "calls",
+      "workflowId": "reset-password",
+      "order": 3,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 201
+      }
+    },
+    {
+      "id": "wf/reset-password/4",
+      "from": "post-send-otp",
+      "to": "auth-controller",
+      "kind": "calls",
+      "workflowId": "reset-password",
+      "order": 4,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 202
+      }
+    },
+    {
+      "id": "wf/reset-password/5",
+      "from": "auth-controller",
+      "to": "user-table",
+      "kind": "reads",
+      "workflowId": "reset-password",
+      "order": 5,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 203
+      }
+    },
+    {
+      "id": "wf/reset-password/6",
+      "from": "user-table",
+      "to": "generate-otp",
+      "kind": "calls",
+      "workflowId": "reset-password",
+      "order": 6,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 204
+      }
+    },
+    {
+      "id": "wf/reset-password/7",
+      "from": "generate-otp",
+      "to": "email-transport",
+      "kind": "calls",
+      "workflowId": "reset-password",
+      "order": 7,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 205
+      }
+    },
+    {
+      "id": "wf/reset-password/8",
+      "from": "email-transport",
+      "to": "smtp-provider",
+      "kind": "next",
+      "workflowId": "reset-password",
+      "order": 8,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 206
+      }
+    },
+    {
+      "id": "wf/reset-password/9",
+      "from": "smtp-provider",
+      "to": "otp-store",
+      "kind": "writes",
+      "workflowId": "reset-password",
+      "order": 9,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 207
+      }
+    },
+    {
+      "id": "wf/reset-password/10",
+      "from": "otp-store",
+      "to": "login-page",
+      "kind": "renders",
+      "workflowId": "reset-password",
+      "order": 10,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 208
+      }
+    },
+    {
+      "id": "wf/reset-password/11",
+      "from": "login-page",
+      "to": "post-verify-otp",
+      "kind": "calls",
+      "workflowId": "reset-password",
+      "order": 11,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 209
+      }
+    },
+    {
+      "id": "wf/reset-password/12",
+      "from": "post-verify-otp",
+      "to": "verify-otp-check",
+      "kind": "next",
+      "workflowId": "reset-password",
+      "order": 12,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 210
+      }
+    },
+    {
+      "id": "wf/reset-password/13",
+      "from": "verify-otp-check",
+      "to": "otp-store",
+      "kind": "reads",
+      "workflowId": "reset-password",
+      "order": 13,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 211
+      }
+    },
+    {
+      "id": "wf/reset-password/14",
+      "from": "otp-store",
+      "to": "post-update-password",
+      "kind": "calls",
+      "workflowId": "reset-password",
+      "order": 14,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 212
+      }
+    },
+    {
+      "id": "wf/reset-password/15",
+      "from": "post-update-password",
+      "to": "check-new-password",
+      "kind": "next",
+      "workflowId": "reset-password",
+      "order": 15,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 213
+      }
+    },
+    {
+      "id": "wf/reset-password/16",
+      "from": "check-new-password",
+      "to": "hash-password",
+      "kind": "calls",
+      "workflowId": "reset-password",
+      "order": 16,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 214
+      }
+    },
+    {
+      "id": "wf/reset-password/17",
+      "from": "hash-password",
+      "to": "user-table",
+      "kind": "writes",
+      "workflowId": "reset-password",
+      "order": 17,
+      "role": "Visitor",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 215
+      }
+    },
+    {
+      "id": "wf/reset-password/error/1",
+      "from": "user-table",
+      "to": "user-not-found",
+      "kind": "error",
+      "label": "no account with that email, answered 404",
+      "workflowId": "reset-password",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 218
+      }
+    },
+    {
+      "id": "wf/reset-password/error/2",
+      "from": "verify-otp-check",
+      "to": "error/the-code-is-wrong-has-expired-or-was-already-use",
+      "kind": "error",
+      "label": "the code is wrong, has expired, or was already used",
+      "workflowId": "reset-password",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 219
+      }
+    },
+    {
+      "id": "wf/reset-password/error/3",
+      "from": "check-new-password",
+      "to": "error/the-new-password-is-the-same-as-the-current-one",
+      "kind": "error",
+      "label": "the new password is the same as the current one",
+      "workflowId": "reset-password",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 220
+      }
+    },
+    {
+      "id": "wf/reset-password/error/4",
+      "from": "otp-store",
+      "to": "otp-lost-on-restart",
+      "kind": "error",
+      "label": "pending codes live only in the process, so a backend restart invalidates every one of them",
+      "workflowId": "reset-password",
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 221
+      }
+    }
+  ],
+  "workflows": [
+    {
+      "id": "sign-in",
+      "name": "Sign in",
+      "roles": [
+        "Visitor"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "nodeId": "visitor",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 172
+          },
+          "edgeId": "wf/sign-in/1"
+        },
+        {
+          "order": 2,
+          "nodeId": "login-page",
+          "note": "types an email and password",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 173
+          },
+          "edgeId": "wf/sign-in/2"
+        },
+        {
+          "order": 3,
+          "nodeId": "auth-service",
+          "note": "login() posts the credentials",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 174
+          },
+          "edgeId": "wf/sign-in/3"
+        },
+        {
+          "order": 4,
+          "nodeId": "axios-instance",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 175
+          },
+          "edgeId": "wf/sign-in/4"
+        },
+        {
+          "order": 5,
+          "nodeId": "post-login",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 176
+          },
+          "edgeId": "wf/sign-in/5"
+        },
+        {
+          "order": 6,
+          "nodeId": "auth-controller",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 177
+          },
+          "edgeId": "wf/sign-in/6"
+        },
+        {
+          "order": 7,
+          "nodeId": "user-table",
+          "note": "looked up by email",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 178
+          },
+          "edgeId": "wf/sign-in/7"
+        },
+        {
+          "order": 8,
+          "nodeId": "company-table",
+          "note": "the user's company, for isStatus",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 179
+          },
+          "edgeId": "wf/sign-in/8"
+        },
+        {
+          "order": 9,
+          "nodeId": "verify-credentials",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 180
+          },
+          "edgeId": "wf/sign-in/9"
+        },
+        {
+          "order": 10,
+          "nodeId": "issue-jwt",
+          "note": "a 7-day token carrying role, companyId and companyStatus",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 181
+          },
+          "edgeId": "wf/sign-in/10"
+        },
+        {
+          "order": 11,
+          "nodeId": "auth-cookie",
+          "note": "set by the server, readable by the client",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 182
+          },
+          "edgeId": "wf/sign-in/11"
+        },
+        {
+          "order": 12,
+          "nodeId": "check-company-status",
+          "note": "the client decodes the token and checks it",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 183
+          },
+          "edgeId": "wf/sign-in/12"
+        },
+        {
+          "order": 13,
+          "nodeId": "navigate-by-role",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 184
+          },
+          "edgeId": "wf/sign-in/13"
+        },
+        {
+          "order": 14,
+          "nodeId": "user",
+          "note": "lands on the screen for their role",
+          "role": "User",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 185
+          }
+        }
+      ],
+      "errors": [
+        {
+          "atNodeId": "verify-credentials",
+          "errorNodeId": "error/no-account-with-that-email-or-the-password-does-",
+          "reason": "no account with that email, or the password does not match, both answered as \"Invalid credentials!\"",
+          "edgeId": "wf/sign-in/error/1",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 188
+          }
+        },
+        {
+          "atNodeId": "check-company-status",
+          "errorNodeId": "account-disabled",
+          "reason": "the company is switched off, so the client immediately logs back out",
+          "edgeId": "wf/sign-in/error/2",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 189
+          }
+        },
+        {
+          "atNodeId": "auth-controller",
+          "errorNodeId": "error/any-unexpected-failure-is-answered-as-login-unsu",
+          "reason": "any unexpected failure is answered as \"Login Unsuccessful\"",
+          "edgeId": "wf/sign-in/error/3",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 190
+          }
+        }
+      ],
+      "meta": {},
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 166
+      }
+    },
+    {
+      "id": "reset-password",
+      "name": "Reset a forgotten password",
+      "roles": [
+        "Visitor"
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "nodeId": "visitor",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 198
+          },
+          "edgeId": "wf/reset-password/1"
+        },
+        {
+          "order": 2,
+          "nodeId": "login-page",
+          "note": "chooses to reset the password",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 199
+          },
+          "edgeId": "wf/reset-password/2"
+        },
+        {
+          "order": 3,
+          "nodeId": "auth-service",
+          "note": "sendOtp(email)",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 200
+          },
+          "edgeId": "wf/reset-password/3"
+        },
+        {
+          "order": 4,
+          "nodeId": "post-send-otp",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 201
+          },
+          "edgeId": "wf/reset-password/4"
+        },
+        {
+          "order": 5,
+          "nodeId": "auth-controller",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 202
+          },
+          "edgeId": "wf/reset-password/5"
+        },
+        {
+          "order": 6,
+          "nodeId": "user-table",
+          "note": "the account must already exist",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 203
+          },
+          "edgeId": "wf/reset-password/6"
+        },
+        {
+          "order": 7,
+          "nodeId": "generate-otp",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 204
+          },
+          "edgeId": "wf/reset-password/7"
+        },
+        {
+          "order": 8,
+          "nodeId": "email-transport",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 205
+          },
+          "edgeId": "wf/reset-password/8"
+        },
+        {
+          "order": 9,
+          "nodeId": "smtp-provider",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 206
+          },
+          "edgeId": "wf/reset-password/9"
+        },
+        {
+          "order": 10,
+          "nodeId": "otp-store",
+          "note": "the code and its expiry are held in process memory",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 207
+          },
+          "edgeId": "wf/reset-password/10"
+        },
+        {
+          "order": 11,
+          "nodeId": "login-page",
+          "note": "types the code from the email",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 208
+          },
+          "edgeId": "wf/reset-password/11"
+        },
+        {
+          "order": 12,
+          "nodeId": "post-verify-otp",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 209
+          },
+          "edgeId": "wf/reset-password/12"
+        },
+        {
+          "order": 13,
+          "nodeId": "verify-otp-check",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 210
+          },
+          "edgeId": "wf/reset-password/13"
+        },
+        {
+          "order": 14,
+          "nodeId": "otp-store",
+          "note": "compared, then deleted",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 211
+          },
+          "edgeId": "wf/reset-password/14"
+        },
+        {
+          "order": 15,
+          "nodeId": "post-update-password",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 212
+          },
+          "edgeId": "wf/reset-password/15"
+        },
+        {
+          "order": 16,
+          "nodeId": "check-new-password",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 213
+          },
+          "edgeId": "wf/reset-password/16"
+        },
+        {
+          "order": 17,
+          "nodeId": "hash-password",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 214
+          },
+          "edgeId": "wf/reset-password/17"
+        },
+        {
+          "order": 18,
+          "nodeId": "user-table",
+          "note": "the new hash replaces the old one",
+          "role": "Visitor",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 215
+          }
+        }
+      ],
+      "errors": [
+        {
+          "atNodeId": "user-table",
+          "errorNodeId": "user-not-found",
+          "reason": "no account with that email, answered 404",
+          "edgeId": "wf/reset-password/error/1",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 218
+          }
+        },
+        {
+          "atNodeId": "verify-otp-check",
+          "errorNodeId": "error/the-code-is-wrong-has-expired-or-was-already-use",
+          "reason": "the code is wrong, has expired, or was already used",
+          "edgeId": "wf/reset-password/error/2",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 219
+          }
+        },
+        {
+          "atNodeId": "check-new-password",
+          "errorNodeId": "error/the-new-password-is-the-same-as-the-current-one",
+          "reason": "the new password is the same as the current one",
+          "edgeId": "wf/reset-password/error/3",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 220
+          }
+        },
+        {
+          "atNodeId": "otp-store",
+          "errorNodeId": "otp-lost-on-restart",
+          "reason": "pending codes live only in the process, so a backend restart invalidates every one of them",
+          "edgeId": "wf/reset-password/error/4",
+          "source": {
+            "file": "docs/apps/navigate-auth.md",
+            "line": 221
+          }
+        }
+      ],
+      "meta": {},
+      "source": {
+        "file": "docs/apps/navigate-auth.md",
+        "line": 192
+      }
+    }
+  ],
+  "diagnostics": []
+}

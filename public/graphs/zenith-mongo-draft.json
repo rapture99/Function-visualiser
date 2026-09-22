@@ -1,0 +1,4586 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "title": "Zenith Mongo",
+    "scope": "system",
+    "source": "docs/apps/zenith-mongo.draft.md",
+    "extra": {
+      "Generated": "scanner",
+      "Scanned": "46 files"
+    }
+  },
+  "nodes": [
+    {
+      "id": "get-salary-components",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /salary-components",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/salary-components",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:11"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 14
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "get-salary-components-types-category",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /salary-components/types/:category",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/salary-components/types/:category",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:13"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 22
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "post-salary-components",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /salary-components",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/salary-components",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:15"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 30
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "put-salary-components-component-id",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /salary-components/:componentId",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/salary-components/:componentId",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:17"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 38
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "delete-salary-components-component-id",
+      "kind": "api",
+      "layer": "logic",
+      "name": "DELETE /salary-components/:componentId",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "DELETE",
+        "Path": "/salary-components/:componentId",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:19"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 46
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "post-employees",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /employees",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/employees",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:22"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 54
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "get-employees",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /employees",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/employees",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:24"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 62
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "get-employees-limit-status",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /employees/limit-status",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/employees/limit-status",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:26"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 70
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "put-employees",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /employees",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/employees",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:28"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 78
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "get-earning-salary-components",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /earning-salary-components",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/earning-salary-components",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:30"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 86
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "delete-employees-employee-id",
+      "kind": "api",
+      "layer": "logic",
+      "name": "DELETE /employees/:employeeId",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "DELETE",
+        "Path": "/employees/:employeeId",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:32"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 94
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "delete-employee-bulk",
+      "kind": "api",
+      "layer": "logic",
+      "name": "DELETE /employee/bulk",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "DELETE",
+        "Path": "/employee/bulk",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:34"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 102
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "post-company-tax-config-config-type",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /company-tax-config/:configType",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/company-tax-config/:configType",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:37"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 110
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "get-company-tax-config-config-type",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /company-tax-config/:configType",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/company-tax-config/:configType",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:39"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 118
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "patch-company-tax-config-disable-config-type",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PATCH /company-tax-config/disable/:configType",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "PATCH",
+        "Path": "/company-tax-config/disable/:configType",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:41"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 126
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "post-settings",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /settings",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/settings",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:44"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 134
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "get-settings",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /settings",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/settings",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:45"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 142
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "put-settings-working-days",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /settings/working-days",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/settings/working-days",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:46"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 150
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "post-holidays",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /holidays",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/holidays",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:47"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 158
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "put-holidays-id",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /holidays/:id",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/holidays/:id",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:48"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 166
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "delete-holidays-id",
+      "kind": "api",
+      "layer": "logic",
+      "name": "DELETE /holidays/:id",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "DELETE",
+        "Path": "/holidays/:id",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:49"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 174
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "get-holidays-export-template",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /holidays/export-template",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/holidays/export-template",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:50"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 182
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "get-holidays-export",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /holidays/export",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/holidays/export",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:51"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 190
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "put-change-password",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /change-password",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/change-password",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:59"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 198
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "put-settings-bank-accounts",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /settings/bank-accounts",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/settings/bank-accounts",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:61"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 206
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "put-settings-locations",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /settings/locations",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/settings/locations",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:62"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 214
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "put-settings-departments",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /settings/departments",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/settings/departments",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:63"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 222
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "put-settings-designations",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /settings/designations",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/settings/designations",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:64"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 230
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "get-company-settings",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /company-settings",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/company-settings",
+        "Found": "Express-style route",
+        "Source": "routes/admin.routes.js:66"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 238
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "admin-controller",
+      "kind": "controller",
+      "layer": "logic",
+      "name": "Admin Controller",
+      "module": "Admin",
+      "roles": [],
+      "meta": {
+        "Source": "controllers/adminController.js",
+        "Found": "controller"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 246
+      },
+      "parentId": "module/admin"
+    },
+    {
+      "id": "get-stats",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /stats",
+      "module": "Admin Dashboard",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/stats",
+        "Found": "Express-style route",
+        "Source": "routes/adminDashboard.routes.js:5"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 254
+      },
+      "parentId": "module/admin-dashboard"
+    },
+    {
+      "id": "admin-dashboard-controller",
+      "kind": "controller",
+      "layer": "logic",
+      "name": "Admin Dashboard.controller",
+      "module": "Admin Dashboard",
+      "roles": [],
+      "meta": {
+        "Source": "controllers/adminDashboard.controller.js",
+        "Found": "controller"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 262
+      },
+      "parentId": "module/admin-dashboard"
+    },
+    {
+      "id": "get-dashboard-attendance-overview",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /dashboard/attendance-overview",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/dashboard/attendance-overview",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:13"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 270
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "get-shifts",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /shifts",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/shifts",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:17"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 278
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "post-shifts",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /shifts",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/shifts",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:19"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 286
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "delete-shifts-shift-id",
+      "kind": "api",
+      "layer": "logic",
+      "name": "DELETE /shifts/:shiftId",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "DELETE",
+        "Path": "/shifts/:shiftId",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:21"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 294
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "get-ot-request",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /ot-request",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/ot-request",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:25"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 302
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "post-ot-request",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /ot-request",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/ot-request",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:27"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 310
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "get-shift-schedules",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /shift-schedules",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/shift-schedules",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:31"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 318
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "post-shift-schedule-upsert",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /shift-schedule/upsert",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/shift-schedule/upsert",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:33"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 326
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "get-late-arrivals",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /late-arrivals",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/late-arrivals",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:38"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 334
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "post-late-arrivals",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /late-arrivals",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/late-arrivals",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:40"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 342
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "get-regularization-requests",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /regularization-requests",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/regularization-requests",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:44"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 350
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "post-regularization-requests",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /regularization-requests",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/regularization-requests",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:46"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 358
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "put-regularization-requests",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /regularization-requests",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/regularization-requests",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:48"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 366
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "get-calender",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /calender",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/calender",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:51"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 374
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "get-calendar",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /Calendar",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/Calendar",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:53"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 382
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "get-muster-roll",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /muster-roll",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/muster-roll",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:56"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 390
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "get-muster-roll-export",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /muster-roll/export",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/muster-roll/export",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:58"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 398
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "get-muster-roll-export-pdf",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /muster-roll/export-pdf",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/muster-roll/export-pdf",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:60"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 406
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "post-mark",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /mark",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/mark",
+        "Found": "Express-style route",
+        "Source": "routes/attendance.route.js:64"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 414
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "attendance",
+      "kind": "entity",
+      "layer": "data",
+      "name": "Attendance",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/Attendance.js:48"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 422
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "attendance-controller",
+      "kind": "controller",
+      "layer": "logic",
+      "name": "Attendance.controller",
+      "module": "Attendance",
+      "roles": [],
+      "meta": {
+        "Source": "controllers/attendance.controller.js",
+        "Found": "controller"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 429
+      },
+      "parentId": "module/attendance"
+    },
+    {
+      "id": "post-login",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /login",
+      "module": "Auth",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/login",
+        "Found": "Express-style route",
+        "Source": "routes/auth.routes.js:5"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 437
+      },
+      "parentId": "module/auth"
+    },
+    {
+      "id": "get-verify-token",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /verify/:token",
+      "module": "Auth",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/verify/:token",
+        "Found": "Express-style route",
+        "Source": "routes/auth.routes.js:7"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 445
+      },
+      "parentId": "module/auth"
+    },
+    {
+      "id": "post-accept",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /accept",
+      "module": "Auth",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/accept",
+        "Found": "Express-style route",
+        "Source": "routes/auth.routes.js:9"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 453
+      },
+      "parentId": "module/auth"
+    },
+    {
+      "id": "auth-controller",
+      "kind": "controller",
+      "layer": "logic",
+      "name": "Auth.controller",
+      "module": "Auth",
+      "roles": [],
+      "meta": {
+        "Source": "controllers/auth.controller.js",
+        "Found": "controller"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 461
+      },
+      "parentId": "module/auth"
+    },
+    {
+      "id": "auth",
+      "kind": "decision",
+      "layer": "logic",
+      "name": "Auth",
+      "module": "Auth",
+      "roles": [],
+      "meta": {
+        "Source": "middleware/auth.js",
+        "Found": "middleware/guard"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 467
+      },
+      "parentId": "module/auth"
+    },
+    {
+      "id": "company",
+      "kind": "entity",
+      "layer": "data",
+      "name": "Company",
+      "module": "Company",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/Company.js:130"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 475
+      },
+      "parentId": "module/company"
+    },
+    {
+      "id": "get-dashboard-stats",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /dashboard/stats",
+      "module": "Company Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/dashboard/stats",
+        "Found": "Express-style route",
+        "Source": "routes/companyAdmin.routes.js:17"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 484
+      },
+      "parentId": "module/company-admin"
+    },
+    {
+      "id": "get-employees-id-employee-id",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /employees/id/:employeeId",
+      "module": "Company Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/employees/id/:employeeId",
+        "Found": "Express-style route",
+        "Source": "routes/companyAdmin.routes.js:25"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 492
+      },
+      "parentId": "module/company-admin"
+    },
+    {
+      "id": "delete-employees-id-employee-id",
+      "kind": "api",
+      "layer": "logic",
+      "name": "DELETE /employees/id/:employeeId",
+      "module": "Company Admin",
+      "roles": [],
+      "meta": {
+        "Method": "DELETE",
+        "Path": "/employees/id/:employeeId",
+        "Found": "Express-style route",
+        "Source": "routes/companyAdmin.routes.js:27"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 500
+      },
+      "parentId": "module/company-admin"
+    },
+    {
+      "id": "get-employees-employee-id-rating",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /employees/:employeeId/rating",
+      "module": "Company Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/employees/:employeeId/rating",
+        "Found": "Express-style route",
+        "Source": "routes/companyAdmin.routes.js:29"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 508
+      },
+      "parentId": "module/company-admin"
+    },
+    {
+      "id": "get-locations",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /locations",
+      "module": "Company Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/locations",
+        "Found": "Express-style route",
+        "Source": "routes/companyAdmin.routes.js:35"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 516
+      },
+      "parentId": "module/company-admin"
+    },
+    {
+      "id": "company-admin-controller",
+      "kind": "controller",
+      "layer": "logic",
+      "name": "Company Admin.controller",
+      "module": "Company Admin",
+      "roles": [],
+      "meta": {
+        "Source": "controllers/companyAdmin.controller.js",
+        "Found": "controller"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 524
+      },
+      "parentId": "module/company-admin"
+    },
+    {
+      "id": "company-settings",
+      "kind": "entity",
+      "layer": "data",
+      "name": "CompanySettings",
+      "module": "Company Settings",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/CompanySettings.js:335"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 532
+      },
+      "parentId": "module/company-settings"
+    },
+    {
+      "id": "get-health",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /health",
+      "module": "Core",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/health",
+        "Found": "Express-style route",
+        "Source": "routes/index.js:3"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 541
+      },
+      "parentId": "module/core"
+    },
+    {
+      "id": "employee",
+      "kind": "entity",
+      "layer": "data",
+      "name": "Employee",
+      "module": "Employee",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/Employee.js:139"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 551
+      },
+      "parentId": "module/employee"
+    },
+    {
+      "id": "employee-attendance",
+      "kind": "entity",
+      "layer": "data",
+      "name": "EmployeeAttendance",
+      "module": "Employee Attendance",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/EmployeeAttendance.js:89"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 560
+      },
+      "parentId": "module/employee-attendance"
+    },
+    {
+      "id": "invitation",
+      "kind": "entity",
+      "layer": "data",
+      "name": "Invitation",
+      "module": "Invitation",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/Invitation.js:45"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 569
+      },
+      "parentId": "module/invitation"
+    },
+    {
+      "id": "late-arrival",
+      "kind": "entity",
+      "layer": "data",
+      "name": "LateArrival",
+      "module": "Late Arrival",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/LateArrival.js:19"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 578
+      },
+      "parentId": "module/late-arrival"
+    },
+    {
+      "id": "leave-balance",
+      "kind": "entity",
+      "layer": "data",
+      "name": "LeaveBalance",
+      "module": "Leave Balance",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/LeaveBalance.js:21"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 587
+      },
+      "parentId": "module/leave-balance"
+    },
+    {
+      "id": "leave-request",
+      "kind": "entity",
+      "layer": "data",
+      "name": "LeaveRequest",
+      "module": "Leave Request",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/LeaveRequest.js:34"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 596
+      },
+      "parentId": "module/leave-request"
+    },
+    {
+      "id": "get-admin-dashboard",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /admin-dashboard",
+      "module": "Leaves",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/admin-dashboard",
+        "Found": "Express-style route",
+        "Source": "routes/leaves.routes.js:9"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 605
+      },
+      "parentId": "module/leaves"
+    },
+    {
+      "id": "put-id-approve",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /:id/approve",
+      "module": "Leaves",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/:id/approve",
+        "Found": "Express-style route",
+        "Source": "routes/leaves.routes.js:10"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 613
+      },
+      "parentId": "module/leaves"
+    },
+    {
+      "id": "post-admin-leave-apply",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /admin-leave-apply",
+      "module": "Leaves",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/admin-leave-apply",
+        "Found": "Express-style route",
+        "Source": "routes/leaves.routes.js:11"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 621
+      },
+      "parentId": "module/leaves"
+    },
+    {
+      "id": "get",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /",
+      "module": "Leaves",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/",
+        "Found": "Express-style route",
+        "Source": "routes/leaves.routes.js:12"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 629
+      },
+      "parentId": "module/leaves"
+    },
+    {
+      "id": "get-leave-requests",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /leave-requests",
+      "module": "Leaves",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/leave-requests",
+        "Found": "Express-style route",
+        "Source": "routes/leaves.routes.js:14"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 637
+      },
+      "parentId": "module/leaves"
+    },
+    {
+      "id": "get-employee-dashboard",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /employee-dashboard",
+      "module": "Leaves",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/employee-dashboard",
+        "Found": "Express-style route",
+        "Source": "routes/leaves.routes.js:15"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 645
+      },
+      "parentId": "module/leaves"
+    },
+    {
+      "id": "post-leave-request",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /leave-request",
+      "module": "Leaves",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/leave-request",
+        "Found": "Express-style route",
+        "Source": "routes/leaves.routes.js:16"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 653
+      },
+      "parentId": "module/leaves"
+    },
+    {
+      "id": "put-id-cancel",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /:id/cancel",
+      "module": "Leaves",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/:id/cancel",
+        "Found": "Express-style route",
+        "Source": "routes/leaves.routes.js:17"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 661
+      },
+      "parentId": "module/leaves"
+    },
+    {
+      "id": "get-document",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /document",
+      "module": "Leaves",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/document",
+        "Found": "Express-style route",
+        "Source": "routes/leaves.routes.js:18"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 669
+      },
+      "parentId": "module/leaves"
+    },
+    {
+      "id": "leaves-controller",
+      "kind": "controller",
+      "layer": "logic",
+      "name": "Leaves.controller",
+      "module": "Leaves",
+      "roles": [],
+      "meta": {
+        "Source": "controllers/leaves.controller.js",
+        "Found": "controller"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 677
+      },
+      "parentId": "module/leaves"
+    },
+    {
+      "id": "loan-request",
+      "kind": "entity",
+      "layer": "data",
+      "name": "LoanRequest",
+      "module": "Loan Request",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/LoanRequest.js:42"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 685
+      },
+      "parentId": "module/loan-request"
+    },
+    {
+      "id": "otlog",
+      "kind": "entity",
+      "layer": "data",
+      "name": "OTLog",
+      "module": "OTLog",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/OTLog.js:31"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 694
+      },
+      "parentId": "module/otlog"
+    },
+    {
+      "id": "payroll-run",
+      "kind": "entity",
+      "layer": "data",
+      "name": "PayrollRun",
+      "module": "Payroll",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/Payroll.js:47"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 703
+      },
+      "parentId": "module/payroll"
+    },
+    {
+      "id": "payslip",
+      "kind": "entity",
+      "layer": "data",
+      "name": "Payslip",
+      "module": "Payslip",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/Payslip.js:42"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 712
+      },
+      "parentId": "module/payslip"
+    },
+    {
+      "id": "regularization",
+      "kind": "entity",
+      "layer": "data",
+      "name": "Regularization",
+      "module": "Regularization",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/Regularization.js:25"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 721
+      },
+      "parentId": "module/regularization"
+    },
+    {
+      "id": "require-role",
+      "kind": "decision",
+      "layer": "logic",
+      "name": "Require Role",
+      "module": "Require Role",
+      "roles": [],
+      "meta": {
+        "Source": "middleware/requireRole.js",
+        "Found": "middleware/guard"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 730
+      },
+      "parentId": "module/require-role"
+    },
+    {
+      "id": "salary-component",
+      "kind": "entity",
+      "layer": "data",
+      "name": "SalaryComponent",
+      "module": "Salary",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/SalaryComponent.js:135"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 738
+      },
+      "parentId": "module/salary"
+    },
+    {
+      "id": "shift",
+      "kind": "entity",
+      "layer": "data",
+      "name": "Shift",
+      "module": "Shift",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/Shift.js:57"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 747
+      },
+      "parentId": "module/shift"
+    },
+    {
+      "id": "subscription-plan",
+      "kind": "entity",
+      "layer": "data",
+      "name": "SubscriptionPlan",
+      "module": "Subscription Plan",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/SubscriptionPlan.js:66"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 756
+      },
+      "parentId": "module/subscription-plan"
+    },
+    {
+      "id": "get-plans-id",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /plans/:id",
+      "module": "Subscription Plans",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/plans/:id",
+        "Found": "Express-style route",
+        "Source": "routes/subscriptionPlans.routes.js:7"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 765
+      },
+      "parentId": "module/subscription-plans"
+    },
+    {
+      "id": "post",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /",
+      "module": "Subscription Plans",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/",
+        "Found": "Express-style route",
+        "Source": "routes/subscriptionPlans.routes.js:8"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 773
+      },
+      "parentId": "module/subscription-plans"
+    },
+    {
+      "id": "put-id",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /:id",
+      "module": "Subscription Plans",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/:id",
+        "Found": "Express-style route",
+        "Source": "routes/subscriptionPlans.routes.js:9"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 781
+      },
+      "parentId": "module/subscription-plans"
+    },
+    {
+      "id": "delete-id",
+      "kind": "api",
+      "layer": "logic",
+      "name": "DELETE /:id",
+      "module": "Subscription Plans",
+      "roles": [],
+      "meta": {
+        "Method": "DELETE",
+        "Path": "/:id",
+        "Found": "Express-style route",
+        "Source": "routes/subscriptionPlans.routes.js:10"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 789
+      },
+      "parentId": "module/subscription-plans"
+    },
+    {
+      "id": "get-features",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /features",
+      "module": "Subscription Plans",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/features",
+        "Found": "Express-style route",
+        "Source": "routes/subscriptionPlans.routes.js:11"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 797
+      },
+      "parentId": "module/subscription-plans"
+    },
+    {
+      "id": "get-status",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /status",
+      "module": "Subscription Plans",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/status",
+        "Found": "Express-style route",
+        "Source": "routes/subscriptionPlans.routes.js:12"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 805
+      },
+      "parentId": "module/subscription-plans"
+    },
+    {
+      "id": "subscription-plans-controller",
+      "kind": "controller",
+      "layer": "logic",
+      "name": "Subscription Plans.controller",
+      "module": "Subscription Plans",
+      "roles": [],
+      "meta": {
+        "Source": "controllers/subscriptionPlans.controller.js",
+        "Found": "controller"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 813
+      },
+      "parentId": "module/subscription-plans"
+    },
+    {
+      "id": "get-companies",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /companies",
+      "module": "Super Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/companies",
+        "Found": "Express-style route",
+        "Source": "routes/superAdmin.routes.js:6"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 821
+      },
+      "parentId": "module/super-admin"
+    },
+    {
+      "id": "post-company",
+      "kind": "api",
+      "layer": "logic",
+      "name": "POST /company",
+      "module": "Super Admin",
+      "roles": [],
+      "meta": {
+        "Method": "POST",
+        "Path": "/company",
+        "Found": "Express-style route",
+        "Source": "routes/superAdmin.routes.js:10"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 829
+      },
+      "parentId": "module/super-admin"
+    },
+    {
+      "id": "get-company",
+      "kind": "api",
+      "layer": "logic",
+      "name": "GET /company",
+      "module": "Super Admin",
+      "roles": [],
+      "meta": {
+        "Method": "GET",
+        "Path": "/company",
+        "Found": "Express-style route",
+        "Source": "routes/superAdmin.routes.js:12"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 837
+      },
+      "parentId": "module/super-admin"
+    },
+    {
+      "id": "put-company",
+      "kind": "api",
+      "layer": "logic",
+      "name": "PUT /company",
+      "module": "Super Admin",
+      "roles": [],
+      "meta": {
+        "Method": "PUT",
+        "Path": "/company",
+        "Found": "Express-style route",
+        "Source": "routes/superAdmin.routes.js:14"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 845
+      },
+      "parentId": "module/super-admin"
+    },
+    {
+      "id": "super-admin-controller",
+      "kind": "controller",
+      "layer": "logic",
+      "name": "Super Admin.controller",
+      "module": "Super Admin",
+      "roles": [],
+      "meta": {
+        "Source": "controllers/superAdmin.controller.js",
+        "Found": "controller"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 853
+      },
+      "parentId": "module/super-admin"
+    },
+    {
+      "id": "user",
+      "kind": "entity",
+      "layer": "data",
+      "name": "User",
+      "module": "User",
+      "roles": [],
+      "meta": {
+        "Store": "MongoDB",
+        "Found": "mongoose.model",
+        "Source": "models/User.js:45"
+      },
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": false,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 861
+      },
+      "parentId": "module/user"
+    },
+    {
+      "id": "module/admin",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Admin",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 12
+      }
+    },
+    {
+      "id": "module/admin-dashboard",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Admin Dashboard",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 252
+      }
+    },
+    {
+      "id": "module/attendance",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Attendance",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 268
+      }
+    },
+    {
+      "id": "module/auth",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Auth",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 435
+      }
+    },
+    {
+      "id": "module/company",
+      "kind": "module",
+      "layer": "data",
+      "name": "Company",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 473
+      }
+    },
+    {
+      "id": "module/company-admin",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Company Admin",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 482
+      }
+    },
+    {
+      "id": "module/company-settings",
+      "kind": "module",
+      "layer": "data",
+      "name": "Company Settings",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 530
+      }
+    },
+    {
+      "id": "module/core",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Core",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 539
+      }
+    },
+    {
+      "id": "module/employee",
+      "kind": "module",
+      "layer": "data",
+      "name": "Employee",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 549
+      }
+    },
+    {
+      "id": "module/employee-attendance",
+      "kind": "module",
+      "layer": "data",
+      "name": "Employee Attendance",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 558
+      }
+    },
+    {
+      "id": "module/invitation",
+      "kind": "module",
+      "layer": "data",
+      "name": "Invitation",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 567
+      }
+    },
+    {
+      "id": "module/late-arrival",
+      "kind": "module",
+      "layer": "data",
+      "name": "Late Arrival",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 576
+      }
+    },
+    {
+      "id": "module/leave-balance",
+      "kind": "module",
+      "layer": "data",
+      "name": "Leave Balance",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 585
+      }
+    },
+    {
+      "id": "module/leave-request",
+      "kind": "module",
+      "layer": "data",
+      "name": "Leave Request",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 594
+      }
+    },
+    {
+      "id": "module/leaves",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Leaves",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 603
+      }
+    },
+    {
+      "id": "module/loan-request",
+      "kind": "module",
+      "layer": "data",
+      "name": "Loan Request",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 683
+      }
+    },
+    {
+      "id": "module/otlog",
+      "kind": "module",
+      "layer": "data",
+      "name": "OTLog",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 692
+      }
+    },
+    {
+      "id": "module/payroll",
+      "kind": "module",
+      "layer": "data",
+      "name": "Payroll",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 701
+      }
+    },
+    {
+      "id": "module/payslip",
+      "kind": "module",
+      "layer": "data",
+      "name": "Payslip",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 710
+      }
+    },
+    {
+      "id": "module/regularization",
+      "kind": "module",
+      "layer": "data",
+      "name": "Regularization",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 719
+      }
+    },
+    {
+      "id": "module/require-role",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Require Role",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 728
+      }
+    },
+    {
+      "id": "module/salary",
+      "kind": "module",
+      "layer": "data",
+      "name": "Salary",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 736
+      }
+    },
+    {
+      "id": "module/shift",
+      "kind": "module",
+      "layer": "data",
+      "name": "Shift",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 745
+      }
+    },
+    {
+      "id": "module/subscription-plan",
+      "kind": "module",
+      "layer": "data",
+      "name": "Subscription Plan",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 754
+      }
+    },
+    {
+      "id": "module/subscription-plans",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Subscription Plans",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 763
+      }
+    },
+    {
+      "id": "module/super-admin",
+      "kind": "module",
+      "layer": "logic",
+      "name": "Super Admin",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 819
+      }
+    },
+    {
+      "id": "module/user",
+      "kind": "module",
+      "layer": "data",
+      "name": "User",
+      "roles": [],
+      "meta": {},
+      "workflows": [],
+      "rolesReached": [],
+      "implicit": true,
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 859
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "module/admin->get-salary-components:contains",
+      "from": "module/admin",
+      "to": "get-salary-components",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 14
+      }
+    },
+    {
+      "id": "module/admin->get-salary-components-types-category:contains",
+      "from": "module/admin",
+      "to": "get-salary-components-types-category",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 22
+      }
+    },
+    {
+      "id": "module/admin->post-salary-components:contains",
+      "from": "module/admin",
+      "to": "post-salary-components",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 30
+      }
+    },
+    {
+      "id": "module/admin->put-salary-components-component-id:contains",
+      "from": "module/admin",
+      "to": "put-salary-components-component-id",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 38
+      }
+    },
+    {
+      "id": "module/admin->delete-salary-components-component-id:contains",
+      "from": "module/admin",
+      "to": "delete-salary-components-component-id",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 46
+      }
+    },
+    {
+      "id": "module/admin->post-employees:contains",
+      "from": "module/admin",
+      "to": "post-employees",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 54
+      }
+    },
+    {
+      "id": "module/admin->get-employees:contains",
+      "from": "module/admin",
+      "to": "get-employees",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 62
+      }
+    },
+    {
+      "id": "module/admin->get-employees-limit-status:contains",
+      "from": "module/admin",
+      "to": "get-employees-limit-status",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 70
+      }
+    },
+    {
+      "id": "module/admin->put-employees:contains",
+      "from": "module/admin",
+      "to": "put-employees",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 78
+      }
+    },
+    {
+      "id": "module/admin->get-earning-salary-components:contains",
+      "from": "module/admin",
+      "to": "get-earning-salary-components",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 86
+      }
+    },
+    {
+      "id": "module/admin->delete-employees-employee-id:contains",
+      "from": "module/admin",
+      "to": "delete-employees-employee-id",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 94
+      }
+    },
+    {
+      "id": "module/admin->delete-employee-bulk:contains",
+      "from": "module/admin",
+      "to": "delete-employee-bulk",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 102
+      }
+    },
+    {
+      "id": "module/admin->post-company-tax-config-config-type:contains",
+      "from": "module/admin",
+      "to": "post-company-tax-config-config-type",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 110
+      }
+    },
+    {
+      "id": "module/admin->get-company-tax-config-config-type:contains",
+      "from": "module/admin",
+      "to": "get-company-tax-config-config-type",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 118
+      }
+    },
+    {
+      "id": "module/admin->patch-company-tax-config-disable-config-type:contains",
+      "from": "module/admin",
+      "to": "patch-company-tax-config-disable-config-type",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 126
+      }
+    },
+    {
+      "id": "module/admin->post-settings:contains",
+      "from": "module/admin",
+      "to": "post-settings",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 134
+      }
+    },
+    {
+      "id": "module/admin->get-settings:contains",
+      "from": "module/admin",
+      "to": "get-settings",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 142
+      }
+    },
+    {
+      "id": "module/admin->put-settings-working-days:contains",
+      "from": "module/admin",
+      "to": "put-settings-working-days",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 150
+      }
+    },
+    {
+      "id": "module/admin->post-holidays:contains",
+      "from": "module/admin",
+      "to": "post-holidays",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 158
+      }
+    },
+    {
+      "id": "module/admin->put-holidays-id:contains",
+      "from": "module/admin",
+      "to": "put-holidays-id",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 166
+      }
+    },
+    {
+      "id": "module/admin->delete-holidays-id:contains",
+      "from": "module/admin",
+      "to": "delete-holidays-id",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 174
+      }
+    },
+    {
+      "id": "module/admin->get-holidays-export-template:contains",
+      "from": "module/admin",
+      "to": "get-holidays-export-template",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 182
+      }
+    },
+    {
+      "id": "module/admin->get-holidays-export:contains",
+      "from": "module/admin",
+      "to": "get-holidays-export",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 190
+      }
+    },
+    {
+      "id": "module/admin->put-change-password:contains",
+      "from": "module/admin",
+      "to": "put-change-password",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 198
+      }
+    },
+    {
+      "id": "module/admin->put-settings-bank-accounts:contains",
+      "from": "module/admin",
+      "to": "put-settings-bank-accounts",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 206
+      }
+    },
+    {
+      "id": "module/admin->put-settings-locations:contains",
+      "from": "module/admin",
+      "to": "put-settings-locations",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 214
+      }
+    },
+    {
+      "id": "module/admin->put-settings-departments:contains",
+      "from": "module/admin",
+      "to": "put-settings-departments",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 222
+      }
+    },
+    {
+      "id": "module/admin->put-settings-designations:contains",
+      "from": "module/admin",
+      "to": "put-settings-designations",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 230
+      }
+    },
+    {
+      "id": "module/admin->get-company-settings:contains",
+      "from": "module/admin",
+      "to": "get-company-settings",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 238
+      }
+    },
+    {
+      "id": "module/admin->admin-controller:contains",
+      "from": "module/admin",
+      "to": "admin-controller",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 246
+      }
+    },
+    {
+      "id": "module/admin-dashboard->get-stats:contains",
+      "from": "module/admin-dashboard",
+      "to": "get-stats",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 254
+      }
+    },
+    {
+      "id": "module/admin-dashboard->admin-dashboard-controller:contains",
+      "from": "module/admin-dashboard",
+      "to": "admin-dashboard-controller",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 262
+      }
+    },
+    {
+      "id": "module/attendance->get-dashboard-attendance-overview:contains",
+      "from": "module/attendance",
+      "to": "get-dashboard-attendance-overview",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 270
+      }
+    },
+    {
+      "id": "module/attendance->get-shifts:contains",
+      "from": "module/attendance",
+      "to": "get-shifts",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 278
+      }
+    },
+    {
+      "id": "module/attendance->post-shifts:contains",
+      "from": "module/attendance",
+      "to": "post-shifts",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 286
+      }
+    },
+    {
+      "id": "module/attendance->delete-shifts-shift-id:contains",
+      "from": "module/attendance",
+      "to": "delete-shifts-shift-id",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 294
+      }
+    },
+    {
+      "id": "module/attendance->get-ot-request:contains",
+      "from": "module/attendance",
+      "to": "get-ot-request",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 302
+      }
+    },
+    {
+      "id": "module/attendance->post-ot-request:contains",
+      "from": "module/attendance",
+      "to": "post-ot-request",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 310
+      }
+    },
+    {
+      "id": "module/attendance->get-shift-schedules:contains",
+      "from": "module/attendance",
+      "to": "get-shift-schedules",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 318
+      }
+    },
+    {
+      "id": "module/attendance->post-shift-schedule-upsert:contains",
+      "from": "module/attendance",
+      "to": "post-shift-schedule-upsert",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 326
+      }
+    },
+    {
+      "id": "module/attendance->get-late-arrivals:contains",
+      "from": "module/attendance",
+      "to": "get-late-arrivals",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 334
+      }
+    },
+    {
+      "id": "module/attendance->post-late-arrivals:contains",
+      "from": "module/attendance",
+      "to": "post-late-arrivals",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 342
+      }
+    },
+    {
+      "id": "module/attendance->get-regularization-requests:contains",
+      "from": "module/attendance",
+      "to": "get-regularization-requests",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 350
+      }
+    },
+    {
+      "id": "module/attendance->post-regularization-requests:contains",
+      "from": "module/attendance",
+      "to": "post-regularization-requests",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 358
+      }
+    },
+    {
+      "id": "module/attendance->put-regularization-requests:contains",
+      "from": "module/attendance",
+      "to": "put-regularization-requests",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 366
+      }
+    },
+    {
+      "id": "module/attendance->get-calender:contains",
+      "from": "module/attendance",
+      "to": "get-calender",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 374
+      }
+    },
+    {
+      "id": "module/attendance->get-calendar:contains",
+      "from": "module/attendance",
+      "to": "get-calendar",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 382
+      }
+    },
+    {
+      "id": "module/attendance->get-muster-roll:contains",
+      "from": "module/attendance",
+      "to": "get-muster-roll",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 390
+      }
+    },
+    {
+      "id": "module/attendance->get-muster-roll-export:contains",
+      "from": "module/attendance",
+      "to": "get-muster-roll-export",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 398
+      }
+    },
+    {
+      "id": "module/attendance->get-muster-roll-export-pdf:contains",
+      "from": "module/attendance",
+      "to": "get-muster-roll-export-pdf",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 406
+      }
+    },
+    {
+      "id": "module/attendance->post-mark:contains",
+      "from": "module/attendance",
+      "to": "post-mark",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 414
+      }
+    },
+    {
+      "id": "module/attendance->attendance:contains",
+      "from": "module/attendance",
+      "to": "attendance",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 422
+      }
+    },
+    {
+      "id": "module/attendance->attendance-controller:contains",
+      "from": "module/attendance",
+      "to": "attendance-controller",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 429
+      }
+    },
+    {
+      "id": "module/auth->post-login:contains",
+      "from": "module/auth",
+      "to": "post-login",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 437
+      }
+    },
+    {
+      "id": "module/auth->get-verify-token:contains",
+      "from": "module/auth",
+      "to": "get-verify-token",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 445
+      }
+    },
+    {
+      "id": "module/auth->post-accept:contains",
+      "from": "module/auth",
+      "to": "post-accept",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 453
+      }
+    },
+    {
+      "id": "module/auth->auth-controller:contains",
+      "from": "module/auth",
+      "to": "auth-controller",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 461
+      }
+    },
+    {
+      "id": "module/auth->auth:contains",
+      "from": "module/auth",
+      "to": "auth",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 467
+      }
+    },
+    {
+      "id": "module/company->company:contains",
+      "from": "module/company",
+      "to": "company",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 475
+      }
+    },
+    {
+      "id": "module/company-admin->get-dashboard-stats:contains",
+      "from": "module/company-admin",
+      "to": "get-dashboard-stats",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 484
+      }
+    },
+    {
+      "id": "module/company-admin->get-employees-id-employee-id:contains",
+      "from": "module/company-admin",
+      "to": "get-employees-id-employee-id",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 492
+      }
+    },
+    {
+      "id": "module/company-admin->delete-employees-id-employee-id:contains",
+      "from": "module/company-admin",
+      "to": "delete-employees-id-employee-id",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 500
+      }
+    },
+    {
+      "id": "module/company-admin->get-employees-employee-id-rating:contains",
+      "from": "module/company-admin",
+      "to": "get-employees-employee-id-rating",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 508
+      }
+    },
+    {
+      "id": "module/company-admin->get-locations:contains",
+      "from": "module/company-admin",
+      "to": "get-locations",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 516
+      }
+    },
+    {
+      "id": "module/company-admin->company-admin-controller:contains",
+      "from": "module/company-admin",
+      "to": "company-admin-controller",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 524
+      }
+    },
+    {
+      "id": "module/company-settings->company-settings:contains",
+      "from": "module/company-settings",
+      "to": "company-settings",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 532
+      }
+    },
+    {
+      "id": "module/core->get-health:contains",
+      "from": "module/core",
+      "to": "get-health",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 541
+      }
+    },
+    {
+      "id": "module/employee->employee:contains",
+      "from": "module/employee",
+      "to": "employee",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 551
+      }
+    },
+    {
+      "id": "module/employee-attendance->employee-attendance:contains",
+      "from": "module/employee-attendance",
+      "to": "employee-attendance",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 560
+      }
+    },
+    {
+      "id": "module/invitation->invitation:contains",
+      "from": "module/invitation",
+      "to": "invitation",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 569
+      }
+    },
+    {
+      "id": "module/late-arrival->late-arrival:contains",
+      "from": "module/late-arrival",
+      "to": "late-arrival",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 578
+      }
+    },
+    {
+      "id": "module/leave-balance->leave-balance:contains",
+      "from": "module/leave-balance",
+      "to": "leave-balance",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 587
+      }
+    },
+    {
+      "id": "module/leave-request->leave-request:contains",
+      "from": "module/leave-request",
+      "to": "leave-request",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 596
+      }
+    },
+    {
+      "id": "module/leaves->get-admin-dashboard:contains",
+      "from": "module/leaves",
+      "to": "get-admin-dashboard",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 605
+      }
+    },
+    {
+      "id": "module/leaves->put-id-approve:contains",
+      "from": "module/leaves",
+      "to": "put-id-approve",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 613
+      }
+    },
+    {
+      "id": "module/leaves->post-admin-leave-apply:contains",
+      "from": "module/leaves",
+      "to": "post-admin-leave-apply",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 621
+      }
+    },
+    {
+      "id": "module/leaves->get:contains",
+      "from": "module/leaves",
+      "to": "get",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 629
+      }
+    },
+    {
+      "id": "module/leaves->get-leave-requests:contains",
+      "from": "module/leaves",
+      "to": "get-leave-requests",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 637
+      }
+    },
+    {
+      "id": "module/leaves->get-employee-dashboard:contains",
+      "from": "module/leaves",
+      "to": "get-employee-dashboard",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 645
+      }
+    },
+    {
+      "id": "module/leaves->post-leave-request:contains",
+      "from": "module/leaves",
+      "to": "post-leave-request",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 653
+      }
+    },
+    {
+      "id": "module/leaves->put-id-cancel:contains",
+      "from": "module/leaves",
+      "to": "put-id-cancel",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 661
+      }
+    },
+    {
+      "id": "module/leaves->get-document:contains",
+      "from": "module/leaves",
+      "to": "get-document",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 669
+      }
+    },
+    {
+      "id": "module/leaves->leaves-controller:contains",
+      "from": "module/leaves",
+      "to": "leaves-controller",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 677
+      }
+    },
+    {
+      "id": "module/loan-request->loan-request:contains",
+      "from": "module/loan-request",
+      "to": "loan-request",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 685
+      }
+    },
+    {
+      "id": "module/otlog->otlog:contains",
+      "from": "module/otlog",
+      "to": "otlog",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 694
+      }
+    },
+    {
+      "id": "module/payroll->payroll-run:contains",
+      "from": "module/payroll",
+      "to": "payroll-run",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 703
+      }
+    },
+    {
+      "id": "module/payslip->payslip:contains",
+      "from": "module/payslip",
+      "to": "payslip",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 712
+      }
+    },
+    {
+      "id": "module/regularization->regularization:contains",
+      "from": "module/regularization",
+      "to": "regularization",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 721
+      }
+    },
+    {
+      "id": "module/require-role->require-role:contains",
+      "from": "module/require-role",
+      "to": "require-role",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 730
+      }
+    },
+    {
+      "id": "module/salary->salary-component:contains",
+      "from": "module/salary",
+      "to": "salary-component",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 738
+      }
+    },
+    {
+      "id": "module/shift->shift:contains",
+      "from": "module/shift",
+      "to": "shift",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 747
+      }
+    },
+    {
+      "id": "module/subscription-plan->subscription-plan:contains",
+      "from": "module/subscription-plan",
+      "to": "subscription-plan",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 756
+      }
+    },
+    {
+      "id": "module/subscription-plans->get-plans-id:contains",
+      "from": "module/subscription-plans",
+      "to": "get-plans-id",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 765
+      }
+    },
+    {
+      "id": "module/subscription-plans->post:contains",
+      "from": "module/subscription-plans",
+      "to": "post",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 773
+      }
+    },
+    {
+      "id": "module/subscription-plans->put-id:contains",
+      "from": "module/subscription-plans",
+      "to": "put-id",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 781
+      }
+    },
+    {
+      "id": "module/subscription-plans->delete-id:contains",
+      "from": "module/subscription-plans",
+      "to": "delete-id",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 789
+      }
+    },
+    {
+      "id": "module/subscription-plans->get-features:contains",
+      "from": "module/subscription-plans",
+      "to": "get-features",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 797
+      }
+    },
+    {
+      "id": "module/subscription-plans->get-status:contains",
+      "from": "module/subscription-plans",
+      "to": "get-status",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 805
+      }
+    },
+    {
+      "id": "module/subscription-plans->subscription-plans-controller:contains",
+      "from": "module/subscription-plans",
+      "to": "subscription-plans-controller",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 813
+      }
+    },
+    {
+      "id": "module/super-admin->get-companies:contains",
+      "from": "module/super-admin",
+      "to": "get-companies",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 821
+      }
+    },
+    {
+      "id": "module/super-admin->post-company:contains",
+      "from": "module/super-admin",
+      "to": "post-company",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 829
+      }
+    },
+    {
+      "id": "module/super-admin->get-company:contains",
+      "from": "module/super-admin",
+      "to": "get-company",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 837
+      }
+    },
+    {
+      "id": "module/super-admin->put-company:contains",
+      "from": "module/super-admin",
+      "to": "put-company",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 845
+      }
+    },
+    {
+      "id": "module/super-admin->super-admin-controller:contains",
+      "from": "module/super-admin",
+      "to": "super-admin-controller",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 853
+      }
+    },
+    {
+      "id": "module/user->user:contains",
+      "from": "module/user",
+      "to": "user",
+      "kind": "contains",
+      "source": {
+        "file": "docs/apps/zenith-mongo.draft.md",
+        "line": 861
+      }
+    }
+  ],
+  "workflows": [],
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-salary-components\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 14,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-salary-components-types-category\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 22,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-salary-components\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 30,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-salary-components-component-id\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 38,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"delete-salary-components-component-id\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 46,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-employees\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 54,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-employees\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 62,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-employees-limit-status\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 70,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-employees\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 78,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-earning-salary-components\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 86,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"delete-employees-employee-id\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 94,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"delete-employee-bulk\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 102,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-company-tax-config-config-type\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 110,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-company-tax-config-config-type\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 118,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"patch-company-tax-config-disable-config-type\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 126,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-settings\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 134,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-settings\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 142,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-settings-working-days\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 150,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-holidays\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 158,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-holidays-id\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 166,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"delete-holidays-id\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 174,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-holidays-export-template\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 182,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-holidays-export\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 190,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-change-password\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 198,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-settings-bank-accounts\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 206,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-settings-locations\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 214,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-settings-departments\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 222,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-settings-designations\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 230,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-company-settings\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 238,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"admin-controller\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 246,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-stats\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 254,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"admin-dashboard-controller\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 262,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-dashboard-attendance-overview\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 270,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-shifts\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 278,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-shifts\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 286,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"delete-shifts-shift-id\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 294,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-ot-request\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 302,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-ot-request\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 310,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-shift-schedules\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 318,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-shift-schedule-upsert\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 326,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-late-arrivals\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 334,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-late-arrivals\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 342,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-regularization-requests\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 350,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-regularization-requests\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 358,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-regularization-requests\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 366,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-calender\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 374,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-calendar\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 382,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-muster-roll\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 390,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-muster-roll-export\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 398,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-muster-roll-export-pdf\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 406,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-mark\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 414,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"attendance\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 422,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"attendance-controller\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 429,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-login\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 437,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-verify-token\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 445,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-accept\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 453,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"auth-controller\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 461,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"auth\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 467,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"company\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 475,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-dashboard-stats\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 484,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-employees-id-employee-id\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 492,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"delete-employees-id-employee-id\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 500,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-employees-employee-id-rating\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 508,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-locations\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 516,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"company-admin-controller\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 524,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"company-settings\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 532,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-health\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 541,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"employee\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 551,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"employee-attendance\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 560,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"invitation\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 569,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"late-arrival\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 578,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"leave-balance\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 587,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"leave-request\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 596,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-admin-dashboard\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 605,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-id-approve\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 613,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-admin-leave-apply\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 621,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 629,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-leave-requests\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 637,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-employee-dashboard\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 645,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-leave-request\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 653,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-id-cancel\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 661,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-document\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 669,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"leaves-controller\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 677,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"loan-request\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 685,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"otlog\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 694,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"payroll-run\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 703,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"payslip\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 712,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"regularization\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 721,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"require-role\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 730,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"salary-component\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 738,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"shift\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 747,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"subscription-plan\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 756,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-plans-id\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 765,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 773,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-id\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 781,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"delete-id\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 789,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-features\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 797,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-status\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 805,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"subscription-plans-controller\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 813,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-companies\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 821,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"post-company\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 829,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"get-company\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 837,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"put-company\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 845,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"super-admin-controller\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 853,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    },
+    {
+      "severity": "warning",
+      "code": "orphan-node",
+      "message": "\"user\" is declared but no workflow or dependency references it.",
+      "file": "docs/apps/zenith-mongo.draft.md",
+      "line": 861,
+      "hint": "Reference it from a workflow step, or delete the declaration."
+    }
+  ]
+}
