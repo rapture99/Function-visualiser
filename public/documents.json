@@ -1,0 +1,52 @@
+{
+  "documents": [
+    {
+      "key": "navigate-auth",
+      "label": "Navigate — Authentication",
+      "scope": "feature",
+      "url": "graphs/navigate-auth.json",
+      "source": "docs/apps/navigate-auth.md",
+      "nodes": 36,
+      "edges": 61,
+      "workflows": 2,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "key": "navigate-draft",
+      "label": "navigate",
+      "scope": "system",
+      "url": "graphs/navigate-draft.json",
+      "source": "docs/apps/navigate.draft.md",
+      "nodes": 325,
+      "edges": 211,
+      "workflows": 0,
+      "errors": 0,
+      "warnings": 202
+    },
+    {
+      "key": "my-app-et-learn-backup",
+      "label": "ET-Learn (Maritime LMS)",
+      "scope": "feature",
+      "url": "graphs/my-app-et-learn-backup.json",
+      "source": "docs/my-app.et-learn.backup.md",
+      "nodes": 118,
+      "edges": 242,
+      "workflows": 12,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "key": "my-app",
+      "label": "Zenith HRMS",
+      "scope": "system",
+      "url": "graphs/my-app.json",
+      "source": "docs/my-app.md",
+      "nodes": 342,
+      "edges": 688,
+      "workflows": 17,
+      "errors": 0,
+      "warnings": 0
+    }
+  ]
+}
